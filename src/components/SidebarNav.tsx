@@ -8,7 +8,7 @@ import {
   FileText,
   Users,
   BookOpen,
-  DollarSign,
+  IndianRupee,
   Globe2,
   ShieldCheck,
   Calendar,
@@ -67,7 +67,7 @@ export const navItems = [
   {
     id: "grants",
     label: "Research Grants & Funding",
-    icon: DollarSign,
+    icon: IndianRupee,
     count: "11",
   },
   {

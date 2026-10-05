@@ -1,43 +1,30 @@
 export interface GalleryItem {
   id: string;
   title: string;
-  category: 'Campus' | 'Leadership' | 'Research' | 'Conferences';
-  imageUrl: string;
+  category: 'Leadership' | 'Campus' | 'Research' | 'Conferences' | 'Speeches';
+  type: 'video' | 'image';
+  videoUrl?: string;
+  youtubeId?: string;
+  imageUrl?: string;
+  thumbnailUrl?: string;
   caption: string;
   year?: string;
+  channel?: string;
+  duration?: string;
 }
 
 export const galleryItems: GalleryItem[] = [
   {
-    id: 'gal-01',
-    title: 'DAV University Main Academic & Administrative Block',
-    category: 'Campus',
-    imageUrl: '/images/dav_university_campus.jpg',
-    caption: 'The majestic administrative building and neoclassical academic campus of DAV University, Jalandhar.',
-    year: '2026'
-  },
-  {
-    id: 'gal-02',
-    title: 'Advanced Photonics & Optical Communications Research Lab',
-    category: 'Research',
-    imageUrl: '/images/photonics_laser_lab.jpg',
-    caption: 'State-of-the-art optical fiber and laser research bench for soliton dispersion investigations and wireless optical communication.',
-    year: '2025'
-  },
-  {
-    id: 'gal-03',
-    title: 'Central University Library & Academic Archives',
-    category: 'Campus',
-    imageUrl: '/images/academic_library_hall.jpg',
-    caption: 'Extensive scholarly repository housing thousands of engineering, science, and management journals and reference volumes.',
-    year: '2025'
-  },
-  {
-    id: 'gal-04',
-    title: 'Annual University Convocation & Leadership Dais',
+    id: 'gal-vid-01',
+    title: 'Empowering Leaders, Transforming Institutions',
     category: 'Leadership',
-    imageUrl: '/images/leadership_convocation_ceremony.jpg',
-    caption: 'Presiding over academic convocations and honoring distinguished scholars, doctoral recipients, and medalists.',
-    year: '2025'
+    type: 'video',
+    youtubeId: 'McyJD5FNOVM',
+    videoUrl: 'https://youtu.be/McyJD5FNOVM',
+    thumbnailUrl: 'https://img.youtube.com/vi/McyJD5FNOVM/hqdefault.jpg',
+    imageUrl: 'https://img.youtube.com/vi/McyJD5FNOVM/maxresdefault.jpg',
+    caption: 'Dr. Manoj Kumar, Vice-Chancellor, DAV University, conducted Workshop-I on Leadership Management from July 15–19, 2026. The workshop equipped Deans, Coordinators, and senior faculty members with practical insights into strategic leadership, innovation, change management, and building high-performance teams.',
+    year: '2026',
+    channel: ''
   }
 ];

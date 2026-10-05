@@ -1,5 +1,5 @@
 import React from 'react';
-import { DollarSign, Landmark, ShieldCheck, CheckCircle2, FileCheck } from 'lucide-react';
+import { IndianRupee, Landmark, ShieldCheck, CheckCircle2, FileCheck } from 'lucide-react';
 import { researchGrantsList } from '../data/grantsData';
 
 export const GrantsProjects: React.FC = () => {

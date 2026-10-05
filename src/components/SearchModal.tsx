@@ -1,11 +1,12 @@
 import React, { useState, useEffect, useMemo, useRef } from 'react';
-import { Search, X, FileText, Lightbulb, BookOpen, Award, Users, Briefcase, ArrowRight } from 'lucide-react';
+import { Search, X, FileText, Lightbulb, BookOpen, Award, Users, Briefcase, Video, ArrowRight } from 'lucide-react';
 import { allPublications } from '../data/publicationsData';
 import { patentsList } from '../data/patentsData';
 import { booksList } from '../data/booksData';
 import { awardsList } from '../data/awardsData';
 import { phdScholarsList } from '../data/phdSupervisionData';
 import { careerPositions } from '../data/positionsData';
+import { galleryItems } from '../data/galleryData';
 
 interface SearchModalProps {
   isOpen: boolean;
@@ -125,6 +126,27 @@ export const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose, onNav
           snippet: pos.period,
           sectionId: 'positions',
           icon: Briefcase
+        });
+      }
+    }
+
+    // Search Media & Gallery
+    for (const item of galleryItems) {
+      if (
+        item.title.toLowerCase().includes(q) ||
+        item.caption.toLowerCase().includes(q) ||
+        (item.channel && item.channel.toLowerCase().includes(q)) ||
+        (item.category && item.category.toLowerCase().includes(q)) ||
+        q.includes('video') ||
+        q.includes('gallery') ||
+        q.includes('youtube')
+      ) {
+        results.push({
+          category: `Gallery (${item.type === 'video' ? 'Video' : item.category})`,
+          title: item.title,
+          snippet: item.caption,
+          sectionId: 'gallery',
+          icon: Video
         });
       }
     }
