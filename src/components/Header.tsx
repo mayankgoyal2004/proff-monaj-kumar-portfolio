@@ -63,14 +63,6 @@ export const Header: React.FC<HeaderProps> = ({ onOpenSearch, activeSection, onN
         <div className="container">
           <div className="hero-content">
             <div className="hero-identity-wrapper">
-              <div className="hero-portrait-frame">
-                <img
-                  src="/images/prof_manoj_kumar.jpg"
-                  alt={executiveProfile.fullName}
-                  className="hero-portrait-img"
-                />
-              </div>
-
               <div className="hero-identity">
                 <div className="hero-crest-badge">
                   <GraduationCap size={15} />
