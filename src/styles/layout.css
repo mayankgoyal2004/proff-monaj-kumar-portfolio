@@ -114,12 +114,12 @@
   right: 0;
   bottom: 0;
   background-image: 
-    radial-gradient(circle at 85% 30%, rgba(203, 156, 43, 0.12) 0%, transparent 50%),
-    linear-gradient(to right, rgba(45, 5, 12, 0.96) 20%, rgba(45, 5, 12, 0.75) 60%, rgba(45, 5, 12, 0.88) 100%),
-    url('/images/dav_university_campus.jpg');
+    radial-gradient(circle at 85% 30%, rgba(203, 156, 43, 0.08) 0%, transparent 50%),
+    linear-gradient(to right, rgba(45, 5, 12, 0.95) 15%, rgba(45, 5, 12, 0.65) 50%, rgba(35, 5, 10, 0.5) 75%, rgba(24, 4, 8, 0.7) 100%),
+    url('/images/iamge-2.webp');
   background-size: cover;
-  background-position: center right;
-  opacity: 0.95;
+  background-position: center 36%;
+  opacity: 0.94;
   pointer-events: none;
 }
 
@@ -221,15 +221,16 @@
   color: var(--color-gold-200);
   line-height: 1.35;
   max-width: 260px;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.75);
   margin-bottom: 0.4rem;
 }
 
 .calligraphy-sub {
   font-size: 0.78rem;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.85);
   letter-spacing: 0.05em;
   text-transform: uppercase;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.7);
 }
 
 /* Mobile Navigation Ribbon */

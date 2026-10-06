@@ -1480,45 +1480,15 @@
   gap: 0.65rem;
 }
 
-.footer-crest-icon {
-  width: 26px;
-  height: 26px;
-  border-radius: var(--radius-xs);
-  background: var(--color-gold-400);
-  color: var(--color-navy-950);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
+.footer-developer {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.8125rem;
 }
 
-.footer-identity-text {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  color: rgba(255, 255, 255, 0.85);
-}
-
-.footer-name {
-  font-family: var(--font-serif);
-  font-weight: 700;
-  font-size: 0.95rem;
-  color: #ffffff;
-}
-
-.footer-dot {
-  opacity: 0.4;
+.footer-dev-brand {
   color: var(--color-gold-300);
-}
-
-.footer-role {
-  color: rgba(255, 255, 255, 0.9);
-}
-
-.footer-extra {
-  color: var(--color-gold-300);
-  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
 }
 
 .footer-simple-right {
