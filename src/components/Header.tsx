@@ -22,6 +22,7 @@ const mobileSections = [
   { id: 'affiliations', label: 'Affiliations' },
   { id: 'events', label: 'Events' },
   { id: 'gallery', label: 'Gallery' },
+  { id: 'news', label: 'News & Media' },
   { id: 'contact', label: 'Contact' }
 ];
 

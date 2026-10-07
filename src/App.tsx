@@ -15,6 +15,7 @@ import { MousAlliances } from './components/MousAlliances';
 import { AffiliationsGovernance } from './components/AffiliationsGovernance';
 import { ConferencesLectures } from './components/ConferencesLectures';
 import { PhotoGallery } from './components/PhotoGallery';
+import { NewsMedia } from './components/NewsMedia';
 import { ContactSecretariat } from './components/ContactSecretariat';
 import { SearchModal } from './components/SearchModal';
 import { Footer } from './components/Footer';
@@ -71,6 +72,9 @@ export const App: React.FC = () => {
         return <ConferencesLectures />;
       case 'gallery':
         return <PhotoGallery />;
+      case 'news':
+      case 'news-media':
+        return <NewsMedia onNavigate={handleSectionSelect} />;
       case 'contact':
         return <ContactSecretariat />;
       default:

@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo, useRef } from 'react';
-import { Search, X, FileText, Lightbulb, BookOpen, Award, Users, Briefcase, Video, ArrowRight } from 'lucide-react';
+import { Search, X, FileText, Lightbulb, BookOpen, Award, Users, Briefcase, Video, Newspaper, ArrowRight } from 'lucide-react';
 import { allPublications } from '../data/publicationsData';
 import { patentsList } from '../data/patentsData';
 import { booksList } from '../data/booksData';
@@ -7,6 +7,7 @@ import { awardsList } from '../data/awardsData';
 import { phdScholarsList } from '../data/phdSupervisionData';
 import { careerPositions } from '../data/positionsData';
 import { galleryItems } from '../data/galleryData';
+import { newsMediaItems } from '../data/newsMediaData';
 
 interface SearchModalProps {
   isOpen: boolean;
@@ -50,6 +51,25 @@ export const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose, onNav
       sectionId: string;
       icon: any;
     }> = [];
+
+    // Search News & Media Coverage (top matches)
+    for (const news of newsMediaItems) {
+      if (
+        news.title.toLowerCase().includes(q) ||
+        news.headline.toLowerCase().includes(q) ||
+        news.source.toLowerCase().includes(q) ||
+        news.excerpt.toLowerCase().includes(q) ||
+        news.tags.some(t => t.toLowerCase().includes(q))
+      ) {
+        results.push({
+          category: `News (${news.source})`,
+          title: news.title,
+          snippet: news.excerpt.slice(0, 110) + '...',
+          sectionId: 'news',
+          icon: Newspaper
+        });
+      }
+    }
 
     // Search Publications (top 5 matches)
     for (const pub of allPublications) {

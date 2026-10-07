@@ -13,6 +13,7 @@ import {
   ShieldCheck,
   Calendar,
   Image as ImageIcon,
+  Newspaper,
   Mail,
   Download,
   Globe,
@@ -93,6 +94,12 @@ export const navItems = [
     label: "Campus & Leadership Gallery",
     icon: ImageIcon,
     count: null,
+  },
+  {
+    id: "news",
+    label: "News & Media Coverage",
+    icon: Newspaper,
+    count: "10+",
   },
   { id: "contact", label: "Contact & Secretariat", icon: Mail, count: null },
 ];
