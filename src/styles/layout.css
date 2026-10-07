@@ -133,12 +133,38 @@
 }
 
 .hero-identity-wrapper {
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
   max-width: 860px;
 }
 
-.hero-identity {
+.hero-portrait-frame {
+  width: 105px;
+  height: 125px;
+  border-radius: var(--radius-xs);
+  border: 2px solid var(--color-gold-300);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+  overflow: hidden;
+  background: #111;
+  flex-shrink: 0;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hero-portrait-frame:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(203, 156, 43, 0.35);
+}
+
+.hero-portrait-img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.hero-identity {
+  flex: 1;
 }
 
 .hero-crest-badge {
@@ -298,14 +324,21 @@
   .academic-hero {
     padding: 1.5rem 0 1.25rem 0;
   }
+  .hero-identity-wrapper {
+    gap: 1rem;
+  }
+  .hero-portrait-frame {
+    width: 80px;
+    height: 96px;
+  }
   .hero-name {
-    font-size: 2.1rem;
+    font-size: 1.95rem;
   }
   .hero-title {
-    font-size: 1.2rem;
+    font-size: 1.15rem;
   }
   .hero-institution {
-    font-size: 0.92rem;
+    font-size: 0.88rem;
     margin-bottom: 0.5rem;
   }
   .hero-pillars-row {
@@ -314,15 +347,24 @@
 }
 
 @media (max-width: 480px) {
+  .hero-identity-wrapper {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 0.85rem;
+  }
+  .hero-portrait-frame {
+    width: 68px;
+    height: 82px;
+  }
   .hero-name {
-    font-size: 1.7rem;
+    font-size: 1.55rem;
   }
   .hero-title {
-    font-size: 1.05rem;
+    font-size: 1rem;
   }
   .hero-crest-badge {
-    font-size: 0.7rem;
-    padding: 0.2rem 0.55rem;
+    font-size: 0.68rem;
+    padding: 0.2rem 0.5rem;
   }
 }
 
