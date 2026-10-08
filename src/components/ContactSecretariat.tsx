@@ -87,11 +87,13 @@ export const ContactSecretariat: React.FC = () => {
                     {executiveProfile.contact.officialEmail}
                   </a>
                 </div>
-                <div>
-                  <a href={`mailto:${executiveProfile.contact.personalEmail}`}>
-                    {executiveProfile.contact.personalEmail}
-                  </a>
-                </div>
+                {executiveProfile.contact.personalEmail && executiveProfile.contact.personalEmail !== executiveProfile.contact.officialEmail && (
+                  <div>
+                    <a href={`mailto:${executiveProfile.contact.personalEmail}`}>
+                      {executiveProfile.contact.personalEmail}
+                    </a>
+                  </div>
+                )}
               </div>
             </div>
           </div>

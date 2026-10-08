@@ -64,7 +64,7 @@ export const executiveProfile: ExecutiveProfile = {
     residenceAddress: "251, Lajpat Nagar, Jalandhar, Punjab (India) - 144001",
     officePhone: "+91-181-2708844",
     mobilePhones: ["+91 9872203898", "+91 9478101102"],
-    officialEmail: "vc@davuniversity.org",
+    officialEmail: "drmanojkumarindia@gmail.com",
     personalEmail: "drmanojkumarindia@gmail.com",
     linkedIn: "https://in.linkedin.com/in/dr-manoj-kumar-56183928"
   },
